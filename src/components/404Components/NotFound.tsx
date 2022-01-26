@@ -1,8 +1,8 @@
 const NotFound = () => {
   return (
-    <div>
+    <main>
       404 Not Found
-    </div>
+    </main>
   )
 }
 
