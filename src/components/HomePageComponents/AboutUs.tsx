@@ -8,7 +8,7 @@ const AboutUs = () => {
       <p className='w-2/3 sm:w-1/2 mt-8'>
         We hold one goal above all others: 100% client satisfaction. Our in-house team of designers and developers uphold the highest standards for project planning and execution.
       </p>
-      <button className='duration-500 items-center text-white fill-white hover:fill-black bg-green-400 px-4 py-3 mt-8 hover:text-black hover:bg-slate-300 rounded-md'>
+      <button className='duration-500 items-center text-white fill-white hover:fill-black bg-green-500 px-4 py-3 mt-8 hover:text-black hover:bg-slate-300 rounded-md'>
         <Link to='services' className='flex flex-row space-x-2 '>
           <span className='text-md font-semibold'>
               Discover More
