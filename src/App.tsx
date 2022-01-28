@@ -6,6 +6,7 @@ import ContactUs from './components/ContactUsComponents/ContactUs'
 import NotFound from './components/404Components/NotFound'
 import Services from './components/ServicesComponents/Services'
 import Careers from './components/CareersComponents/Careers'
+import Footer from './components/FooterComponents/Footer'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='careers' element={<Careers />} />
         <Route path='*'element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
