@@ -4,8 +4,8 @@ const Splash = () => {
   return (
     <div className='bg-splash-bg bg-fixed bg-contain sm:bg-cover w-full h-screen'>
       <div className='w-full h-full flex flex-col items-center bg-mask'>
-        <div className='pt-24 sm:pt-52 text-md text-green-400'>MANAGED IT SOLUTIONS</div>
-        <h1 className='h-max mt-2 w-4/5 sm:w-1/2 text-center text-white font-sans font-extrabold text-5xl sm:text-6xl'>
+        <div className='pt-20 sm:pt-52 text-md text-green-400'>MANAGED IT SOLUTIONS</div>
+        <h1 className='h-max mt-2 w-4/5 sm:w-1/2 text-center text-white font-sans font-extrabold text-4xl sm:text-6xl'>
           Reliable, scalable and built for your business.
         </h1>
         <div className='w-1/2 mt-9 text-slate-400 text-center'>
