@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderTabs = () => {
   return (
-    <ul className='flex flex-row space-x-5 font-sans font-medium text-md md:text-md md:space-x-'>
+    <ul className='flex flex-col items-center space-y-7 sm:space-y-0 lg:flex-row lg:space-x-5 h-full sm:justify-evenly font-sans font-medium text-xl md:text-md '>
       <li className='nav-button'><Link to='/'>Home</Link></li>
       <li className='nav-button'>About Us</li>
       <li className='nav-button'>
