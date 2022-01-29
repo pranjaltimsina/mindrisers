@@ -3,9 +3,9 @@ import PageCard from './PageCard'
 
 const ContactUs = () => {
   return (
-    <main className='h-screen bg-white'>
+    <main className='h-max bg-white'>
       <ContactBanner />
-      <div className='w-full flex flex-row flex-wrap h-full'>
+      <div className='w-full flex flex-row flex-wrap h-max'>
         <PageCard child={'Hello'}/>
         <PageCard child={'Hello'}/>
         <PageCard child={'Hello'}/>

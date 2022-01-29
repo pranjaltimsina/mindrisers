@@ -1,7 +1,14 @@
+import HeaderLeft from '../HeaderComponents/HeaderLeft'
+import SocialLinks from './SocialLinks'
+
 const CompanyInfo = () => {
   return (
-    <div>
-      Company Info
+    <div className='flex flex-col w-full sm:w-1/3'>
+      <HeaderLeft />
+      <p className='w-full'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, perferendis!
+      </p>
+      <SocialLinks />
     </div>
   )
 }

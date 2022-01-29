@@ -6,4 +6,8 @@
   .nav-button {
     @apply border-t-white lg:border-t-4 hover:text-green-400 hover:border-t-green-400 duration-500 cursor-pointer;
   }
+
+  .footer-form-fields {
+    @apply bg-inherit border-2 border-gray-200 rounded-md placeholder:px-2 h-10 w-full px-5;
+  }
 }
