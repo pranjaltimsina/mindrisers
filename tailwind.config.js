@@ -10,8 +10,10 @@ module.exports = {
       },
       backgroundImage: {
         'splash-bg': "url('/src/assets/splash-bg.jpg')",
+        'office-bg': "url('/src/assets/office.jpg')",
       }, colors: {
         'mask': 'rgba(0,0,0,0.75)',
+        'light-mask': 'rgba(0,0,0,0.50)',
       },
     },
   },
