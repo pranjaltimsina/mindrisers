@@ -8,8 +8,8 @@ const Statistic = ({ icon, statNum, text }: statisticInterface) => {
   return (
     <div className='flex flex-col w-max justify-center items-center'>
       {icon}
-      <h1 className='font-sans text-4xl md:text-7xl font-bold pb-4'>{statNum}</h1>
-      <p>{text}</p>
+      <h1 className='font-sans text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold pt-2 pb-2 md:pt-0 md:pb-4'>{statNum}</h1>
+      <p className='text-xs md:text-md'>{text}</p>
     </div>
   )
 }
