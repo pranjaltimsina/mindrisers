@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <section id='about-us' className='h-max py-20 sm:py-32 px-12 md:px-12 lg:px-44'>
       <h3 className='text-green-400 text-2xl font-semibold'>About Us</h3>
-      <p className='text-black font-bold text-2xl sm:text-4xl w-2/3 sm:1/2 pt-9'>We are a progressive software development and management firm.</p>
+      <p className='text-black font-bold text-2xl sm:text-4xl w-full sm:1/2 pt-9'>We are a progressive software development and management firm.</p>
       <p className='w-2/3 sm:w-1/2 mt-8'>
         We hold one goal above all others: 100% client satisfaction. Our in-house team of designers and developers uphold the highest standards for project planning and execution.
       </p>
