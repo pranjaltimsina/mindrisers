@@ -7,7 +7,7 @@ interface DiscoverCardInterface {
 const DiscoverCard = ({ image, title, info }: DiscoverCardInterface) => {
   return (
     <div className='image-box bg-white md:w-[45%] lg:w-[30%] mt-12 flex flex-col rounded-md hover:rounded-none duration-500'>
-      <div className='image-box'>
+      <div className='image-box max-h-56'>
         {image}
       </div>
       <h4 className='font-sans text-neutral-600 font-bold text-xl p-5'>{title}</h4>

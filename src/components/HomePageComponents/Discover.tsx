@@ -1,5 +1,11 @@
 import DiscoverCard from './DiscoverCard'
-import Placeholder from '../../assets/discover-card-img.jpg'
+
+import Database from '../../assets/discover/database.jpg'
+import Hosting from '../../assets/discover/hosting.jpg'
+import Webdev from '../../assets/discover/webdev.jpg'
+import Mobile from '../../assets/discover/mobile.jpg'
+import Enterprise from '../../assets/discover/enterprise.jpg'
+import Marketing from '../../assets/discover/marketing.jpg'
 
 const Discover = () => {
   return (
@@ -10,41 +16,41 @@ const Discover = () => {
           title='Database Migrations'
           info='We facilitate reliable, hassle-free database migrations.'
           image={
-            <img src={Placeholder} alt='Database Migrations'/>
+            <img src={Database} alt='Database Migrations'/>
           }
         />
         <DiscoverCard
           title='Managed Hostings'
           info="We manage and host what you want us to. You won't have to worry about hostings ever again."
           image={
-            <img src={Placeholder} alt='Managed Hostings'/>
+            <img src={Hosting} alt='Managed Hostings'/>
           }
         />
         <DiscoverCard
           title='Web Development' info='We make the best in class modern web applications. Contact us for a quote.'
           image={
-            <img src={Placeholder} alt='Web Development'/>
+            <img src={Webdev} alt='Web Development'/>
           }
         />
         <DiscoverCard
           title='Mobile Apps'
           info='We make top-notch mobile applications for both Android and IOS.'
           image={
-            <img src={Placeholder} alt='Mobile Apps'/>
+            <img src={Mobile} alt='Mobile Apps'/>
           }
         />
         <DiscoverCard
           title='Enterprise Softwares'
           info='The enterprise level applications we make are robust, secure and reliable.'
           image={
-            <img src={Placeholder} alt='Enterprise Softwares'/>
+            <img src={Enterprise} alt='Enterprise Softwares'/>
           }
         />
         <DiscoverCard
           title='Digital Marketing'
           info='We provide all kinds of digital marketing services.'
           image={
-            <img src={Placeholder} alt='Digital Marketing'/>
+            <img src={Marketing} alt='Digital Marketing'/>
           }
         />
       </div>
