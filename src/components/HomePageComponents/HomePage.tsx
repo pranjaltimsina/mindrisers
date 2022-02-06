@@ -11,7 +11,7 @@ const Mission = React.lazy(() => import('./Mission'))
 const OurServices = React.lazy(() => import('./OurServices'))
 const Partners = React.lazy(() => import('./Partners'))
 const Statistics = React.lazy(() => import('./Statistics'))
-// const Testimonials = React.lazy(() => import('./Testimonials'))
+const Testimonials = React.lazy(() => import('./Testimonials'))
 
 const HomePage = () => {
   return (
@@ -25,7 +25,7 @@ const HomePage = () => {
         <Statistics />
         <Jumpstart />
         {/* <OurProjects /> */}
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Partners />
         {/* <BottomContact /> */}
       </Suspense>
