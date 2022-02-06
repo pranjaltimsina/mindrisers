@@ -10,7 +10,9 @@ const OurServices = () => {
         <h4 className='text-md font-medium font-sans text-green-500 tracking-widest'>OUR SERVICE</h4>
         <h1 className='text-white font-bold text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl w-5/6' >Managed IT solutions tailored to your business.</h1>
         <p className='text-white'>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat similique, aut vitae ducimus libero earum quis, minus sint ex doloremque quod illo asperiores, quos cum molestiae quas aspernatur porro reprehenderit.
+          Our team is capable of making applications as sophisticated as you can imagine.
+          We not only make top of the line mobile applications, web applications, enterprise applications,
+          but also specialize in digital marketing, and teaching you modern technologies.
         </p>
         <button className='rounded-md bg-green-400 text-white hover:bg-slate-400 hover:text-black duration-500 h-max py-3 w-max px-4'>
           Learn More

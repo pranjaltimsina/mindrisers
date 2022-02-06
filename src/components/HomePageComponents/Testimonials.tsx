@@ -14,14 +14,14 @@ const Testimonials = () => {
             image='img'
             name='John Doe'
             position='CEO'
-            testimonial='This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial.'
+            testimonial='Whenever we need an intern, mindrisers is our go-to place. They have never let us down.'
             />
           <TestimonialCard
             starCount={5}
             image='img'
             name='John Doe'
             position='CEO'
-            testimonial='This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial. This is a testimonial.'
+            testimonial='Mindrisers is the best in town when we want to teach our new recruits some new technology.'
           />
         </div>
       </div>

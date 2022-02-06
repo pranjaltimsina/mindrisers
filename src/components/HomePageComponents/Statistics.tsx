@@ -42,7 +42,7 @@ const Statistics = () => {
           <h4 className='text-md font-medium font-sans text-green-500 tracking-widest'>STATISTICS</h4>
           <h1 className='text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-5/6' >Consumer insights. Market innovation.</h1>
           <p className='text-white'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem saepe et molestias, ullam commodi ut.
+            Each of our solutions are tailored to your business.
           </p>
           <div className='flex flex-col space-y-10 lg:space-y-0 lg:flex-row w-full lg:space-x-9 items-center pr-5'>
             <Statistic value={87} label='Projects Done' />

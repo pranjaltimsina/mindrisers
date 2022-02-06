@@ -25,7 +25,7 @@ const Partners = () => {
       <div className='flex flex-col'>
         <h3 className='w-full text-center font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-5'>We strive to work with the best</h3>
         <p className='w-full text-center'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorem nostrum aliquid inventore, corporis accusamus.
+          We have worked with successful companies, who have nothing but good things to say about us.
         </p>
       </div>
       <div className='flex flex-col md:flex-row flex-wrap justify-evenly space-y-10 md:space-y-0 md:space-x-16 items-center'>

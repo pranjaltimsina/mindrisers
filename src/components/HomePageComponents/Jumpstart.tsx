@@ -10,8 +10,7 @@ const JumpstartChild = ({ icon, title, info }: JumpStartChildrenInterface) => {
       {icon}
       <h4 className='font-bold text-2xl pt-3 text-center'>{title}</h4>
       <p className='text-neutral-700 text-center'>
-        {/* {info} */}
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        {info}
       </p>
     </div>
   )
@@ -23,7 +22,9 @@ const Jumpstart = () => {
       <div className='flex flex-col'>
         <p className="w-full text-center text-green-500 text-sm tracking-widest font-medium mb-5">WHY BUSINESSES CHOOSE US</p>
         <h3 className='w-full text-center font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-5'>Jumpstart your business</h3>
-        <p className='w-full text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <p className='w-full text-center'>
+          A few things we can boast about
+        </p>
       </div>
       <div className="flex flex-col items-center space-y-9 md:space-y-0 md:flex-row md:space-x-5 flex-nowrap py-7 justify-between ">
         <JumpstartChild
@@ -32,8 +33,8 @@ const Jumpstart = () => {
               <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
           }
-          title="We're loyal"
-          info="This is some info"
+          title="We're fast"
+          info="We complete projects on time"
         />
         <JumpstartChild
           icon={
@@ -42,7 +43,7 @@ const Jumpstart = () => {
           </svg>
           }
           title="We're helpful"
-          info="This is some info"
+          info="You can reach us anytime"
         />
         <JumpstartChild
           icon={
@@ -51,7 +52,7 @@ const Jumpstart = () => {
             </svg>
           }
           title="We're flexible"
-          info="This is some info"
+          info="We specialize in multiple domains"
         />
       </div>
     </section>

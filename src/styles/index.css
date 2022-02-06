@@ -8,7 +8,7 @@
   }
 
   .footer-form-fields {
-    @apply bg-inherit border-2 border-gray-200 rounded-md placeholder:px-2 h-10 w-full px-5;
+    @apply bg-inherit border-2 border-gray-200 rounded-md h-9 w-full px-2;
   }
 }
 

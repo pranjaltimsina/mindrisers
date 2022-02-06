@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/HeaderComponents/Header'
 import HomePage from './components/HomePageComponents/HomePage'
 import NotFound from './components/404Components/NotFound'
-// import Footer from './components/FooterComponents/Footer'
+import Footer from './components/FooterComponents/Footer'
 
 // lazy loaded
 const ContactUs = React.lazy(() => import('./components/ContactUsComponents/ContactUs'))
@@ -44,7 +44,7 @@ const App = () => {
         />
         <Route path='*'element={<NotFound />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 }
