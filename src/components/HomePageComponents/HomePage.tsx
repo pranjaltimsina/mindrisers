@@ -1,29 +1,34 @@
+import React, { Suspense } from 'react'
+
 import AboutUs from './AboutUs'
-import BottomContact from './BottomContact'
-import Discover from './Discover'
-import Jumpstart from './Jumpstart'
-import Mission from './Mission'
-import OurProjects from './OurProjects'
-import OurServices from './OurServices'
-import Partners from './Partners'
 import Splash from './Splash'
-import Statistics from './Statistics'
-import Testimonials from './Testimonials'
+
+// const BottomContact = React.lazy(() => import('./BottomContact'))
+const Discover = React.lazy(() => import('./Discover'))
+const Jumpstart = React.lazy(() => import('./Jumpstart'))
+const Mission = React.lazy(() => import('./Mission'))
+// const OurProjects = React.lazy(() => import('./OurProjects'))
+const OurServices = React.lazy(() => import('./OurServices'))
+const Partners = React.lazy(() => import('./Partners'))
+const Statistics = React.lazy(() => import('./Statistics'))
+// const Testimonials = React.lazy(() => import('./Testimonials'))
 
 const HomePage = () => {
   return (
     <main>
       <Splash />
       <AboutUs />
-      <Mission />
-      <OurServices />
-      <Discover />
-      <Statistics />
-      <Jumpstart />
-      {/* <OurProjects /> */}
-      {/* <Testimonials /> */}
-      <Partners />
-      {/* <BottomContact /> */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Mission />
+        <OurServices />
+        <Discover />
+        <Statistics />
+        <Jumpstart />
+        {/* <OurProjects /> */}
+        {/* <Testimonials /> */}
+        <Partners />
+        {/* <BottomContact /> */}
+      </Suspense>
     </main>
   )
 }
