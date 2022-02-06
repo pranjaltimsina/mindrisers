@@ -51,7 +51,7 @@ const Statistics = () => {
           </div>
         </div>
         <div className='w-full lg:w-1/2 px-4' >
-          <img src={StatisticsImage} alt='Services' className='rounded-md h-full object-cover' />
+          <img src={StatisticsImage} alt='Services' className='rounded-md w-full object-cover' />
         </div>
       </div>
     </section>

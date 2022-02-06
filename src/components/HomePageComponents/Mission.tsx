@@ -14,12 +14,34 @@ const Statistic = ({ icon, statNum, text }: statisticInterface) => {
   )
 }
 
+interface progressInterface {
+  value: number,
+  label: string
+}
+
+const ProgressBar = ({ value, label }: progressInterface) => {
+  return (
+    <div className="w-full">
+      <p className='font-bold text-sm tracking-wide text-neutral-600 mb-3'>{label}</p>
+      <div className='h-1 w-full bg-neutral-800 flex flex-row'>
+        <div className={`h-full bg-green-400 w-[${value}%]`}></div>
+        <div className='w-[4px] bg-green-400 h-4 translate-y-[-12px]'></div>
+        <div className='bg-green-400 w-[32px] h-[32px] rounded-[50%] z-20 translate-x-[-18px] translate-y-[-36px] font-bold text-xs flex justify-center items-center'>
+          {`${value}%`}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const Mission = () => {
   return (
     <section className='flex flex-col w-full h-max bg-neutral-100 py-20 sm:py-32 px-5 sm:px-32 lg:px-44 space-y-24'>
       <div className='flex flex-col md:flex-row w-full justify-between'>
-        <div className='w-full md:w-1/2'>
-          Stuff
+        <div className='w-full mb-16 ml-1 md:ml-0 md:mb-0 md:w-1/2 flex flex-col space-y-10 md:mr-16'>
+          <ProgressBar value={80} label='Development' />
+          <ProgressBar value={80} label='Marketing' />
+          <ProgressBar value={60} label='Design' />
         </div>
         <div className='w-full md:w-1/2 space-y-8'>
           <h1 className='font-sans text-3xl md:text-4xl font-bold'>
