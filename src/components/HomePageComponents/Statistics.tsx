@@ -1,4 +1,38 @@
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
 import StatisticsImage from '../../assets/statistics-img.jpg'
+
+interface statisticInterface {
+  value: number,
+  label: string
+}
+
+const Statistic = ({ value, label }: statisticInterface) => {
+  return (
+    <div className='flex flex-col items-center'>
+      <div className='w-40 h-40 sm:w-36 sm:h-36 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-32 2xl:h-32'>
+        <CircularProgressbar
+          value={value}
+          text={`${value}%`}
+          strokeWidth={6}
+          styles={{
+            path: {
+              // Path color
+              stroke: `rgb(34, 197, 94)`
+            },
+            text: {
+              // Text color
+              fill: `#fff`,
+              fontWeight: 'bold'
+            }
+          }}
+        />
+      </div>
+      <p className='text-white font-medium text-center pt-4 text-base md:text-base xl:text-lg 2xl:text-xl'>{label}</p>
+    </div>
+  )
+}
 
 const Statistics = () => {
   return (
@@ -10,6 +44,11 @@ const Statistics = () => {
           <p className='text-white'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem saepe et molestias, ullam commodi ut.
           </p>
+          <div className='flex flex-col space-y-10 lg:space-y-0 lg:flex-row w-full lg:space-x-9 items-center pr-5'>
+            <Statistic value={87} label='Projects Done' />
+            <Statistic value={90} label='Problems Solved'/>
+            <Statistic value={75} label='Revenue Increase'/>
+          </div>
         </div>
         <div className='w-full lg:w-1/2 px-4' >
           <img src={StatisticsImage} alt='Services' className='rounded-md h-full object-cover' />
