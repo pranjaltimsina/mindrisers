@@ -6,8 +6,7 @@ const ContactBanner = () => {
           Reach Us
         </h1>
         <p className='pt-4 pb-12 sm:pb-28 text-gray-200 w-1/3 text-center'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, assumenda.
-          Lorem ipsum dolor sit amet.
+          You have a great idea that will change the world or want to modernise your business? Contact Us.
         </p>
       </div>
     </div>

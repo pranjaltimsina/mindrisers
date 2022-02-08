@@ -14,9 +14,9 @@ const AboutUs = () => {
       <HomeAboutUs />
       <Mission />
       <OurCulture />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <Partners />
-      <ApplyNow />
+      {/* <ApplyNow /> */}
     </main>
   )
 }
