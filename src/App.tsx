@@ -10,6 +10,7 @@ import Footer from './components/FooterComponents/Footer'
 const ContactUs = React.lazy(() => import('./components/ContactUsComponents/ContactUs'))
 const Services = React.lazy(() => import('./components/ServicesComponents/Services'))
 const Careers = React.lazy(() => import('./components/CareersComponents/Careers'))
+const AboutUs = React.lazy(() => import('./components/AboutUsComponents/AboutUs'))
 
 
 const App = () => {
@@ -23,6 +24,14 @@ const App = () => {
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <ContactUs />
+            </Suspense>
+          }
+        />
+        <Route
+          path='about'
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <AboutUs />
             </Suspense>
           }
         />

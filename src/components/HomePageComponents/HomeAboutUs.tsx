@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const AboutUs = () => {
+const HomeAboutUs = () => {
   return (
     <section id='about-us' className='h-max py-20 sm:py-32 px-12 md:px-12 lg:px-44'>
       <h3 className='text-green-400 text-2xl font-semibold'>About Us</h3>
@@ -25,4 +25,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default HomeAboutUs

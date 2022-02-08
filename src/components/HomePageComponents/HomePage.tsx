@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 
-import AboutUs from './AboutUs'
+import HomeAboutUs from './HomeAboutUs'
 import Splash from './Splash'
 
 // const BottomContact = React.lazy(() => import('./BottomContact'))
@@ -17,7 +17,7 @@ const HomePage = () => {
   return (
     <main>
       <Splash />
-      <AboutUs />
+      <HomeAboutUs />
       <Suspense fallback={<div>Loading...</div>}>
         <Mission />
         <OurServices />
