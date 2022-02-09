@@ -5,7 +5,7 @@ const ServicesBanner = () => {
         <h1 className='font-sans text-4xl sm:text-6xl w-max pt-12 sm:pt-28 font-bold'>
           Services
         </h1>
-        <p className='pt-4 pb-12 sm:pb-28 text-gray-200 w-1/3 text-center'>
+        <p className='pt-4 pb-12 sm:pb-28 text-gray-200 w-4/5  md:w-1/3 text-center'>
           We provide you with an array of services, which we can assure you will be done on time and on budget.
         </p>
       </div>
