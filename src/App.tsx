@@ -22,7 +22,7 @@ const App = () => {
         <Route
           path='contact'
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div className='h-screen'>Loading...</div>}>
               <ContactUs />
             </Suspense>
           }
@@ -30,7 +30,7 @@ const App = () => {
         <Route
           path='about'
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div className='h-screen'>Loading...</div>}>
               <AboutUs />
             </Suspense>
           }
@@ -38,7 +38,7 @@ const App = () => {
         <Route
           path='services'
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div className='h-screen'>Loading...</div>}>
               <Services />
             </Suspense>
           }
@@ -46,7 +46,7 @@ const App = () => {
         <Route
           path='careers'
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div className='h-screen'>Loading...</div>}>
               <Careers />
             </Suspense>
           }

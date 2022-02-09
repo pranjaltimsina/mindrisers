@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const FooterPageLinks = () => {
   return (
     <div className='w-max pb-8 md:pb-8'>
@@ -5,10 +7,22 @@ const FooterPageLinks = () => {
         Company
       </h4>
       <ul className='text-neutral-300'>
-        <li className='hover:text-neutral-400 cursor-pointer'>About Us</li>
-        <li className='hover:text-neutral-400 cursor-pointer'>Services</li>
-        <li className='hover:text-neutral-400 cursor-pointer'>Careers</li>
-        <li className='hover:text-neutral-400 cursor-pointer'>Contact Us</li>
+        <li className='hover:text-neutral-400 cursor-pointer'>
+          <Link to='about'>
+            About Us
+          </Link>
+        </li>
+        <li className='hover:text-neutral-400 cursor-pointer'>
+          <Link to='services'>
+            Services
+          </Link>
+        </li>
+        {/* <li className='hover:text-neutral-400 cursor-pointer'>Careers</li> */}
+        <li className='hover:text-neutral-400 cursor-pointer'>
+          <Link to='contact'>
+            Contact Us
+          </Link>
+        </li>
       </ul>
     </div>
   )
