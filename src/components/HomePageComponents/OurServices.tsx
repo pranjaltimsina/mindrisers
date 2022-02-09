@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 const OurServices = () => {
   const location = useLocation()
-  console.log(location.pathname)
+
   return (
     <section className="bg-stone-900 h-max flex flex-col lg:flex-row py-20 sm:py-32 px-5 sm:px-32 space-y-12 lg:space-y-0">
       <div className='w-full lg:w-1/2 px-4' >
