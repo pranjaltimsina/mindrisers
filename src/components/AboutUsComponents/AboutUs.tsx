@@ -16,7 +16,7 @@ const AboutUs = () => {
       <OurCulture />
       <OurTeam />
       <Partners />
-      {/* <ApplyNow /> */}
+      <ApplyNow />
     </main>
   )
 }
