@@ -81,13 +81,16 @@ const ContactUs = () => {
       <ContactBanner />
       <div className='w-full flex flex-row flex-wrap h-max'>
         <PageCard child={<ContactDetails />}/>
-        <PageCard child={<img src={Building} alt='Building' />}/>
+        <PageCard child={<img src={Building} className='w-full h-full object-cover' alt='Building' />}/>
         <PageCard child={
-            <iframe
-              title='Map'
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.518693059076!2d85.31902561513795!3d27.701267082794438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19688077a1ff%3A0x3ea9b1c08b4234dc!2sMind%20Risers%20Consortium%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1643962692431!5m2!1sen!2snp"
-              width="760" height="556" loading="lazy"
-            />
+            <div className='overflow-hidden relative h-[0] pb-[556px]'>
+              <iframe
+                className='left-0 top-0 h-full w-full absolute'
+                title='Map'
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.518693059076!2d85.31902561513795!3d27.701267082794438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19688077a1ff%3A0x3ea9b1c08b4234dc!2sMind%20Risers%20Consortium%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1643962692431!5m2!1sen!2snp"
+                width="760" height="556" loading="lazy"
+              />
+            </div>
           }
         />
         <PageCard child={<DropMessage />}/>
