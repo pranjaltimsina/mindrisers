@@ -1,13 +1,37 @@
-import ComputerMan from '../../assets/computer-man.jpg'
+import { useRef, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+import useOnScreen from '../../hooks/useOnScreen'
+
+import ComputerMan from '../../assets/computer-man.jpg'
+
 const OurServices = () => {
+  const [show, setShow] = useState(0)
+  const ref = useRef(null)
   const location = useLocation()
+  const isVisible = useOnScreen(ref)
+
+  useEffect(() => {
+    if (!isVisible && show === 0) {
+      setShow(() => 0)
+    } else if (!isVisible && show === 1) {
+      setShow(() => 2)
+    } else if (!isVisible && show === 2) {
+      setShow(() => 2)
+    } else if (isVisible && show === 0) {
+      setShow(() => 1)
+    } else if (isVisible && show === 1) {
+      setShow(() => 2)
+    } else if (isVisible && show === 2) {
+      setShow(() => 2)
+    }
+  }, [ isVisible, show ])
+
 
   return (
     <section className="bg-stone-900 h-max flex flex-col lg:flex-row py-20 sm:py-32 px-5 sm:px-32 space-y-12 lg:space-y-0">
       <div className='w-full lg:w-1/2 px-4' >
-        <img src={ComputerMan} alt='Services' className='rounded-md w-full object-cover' />
+        <img src={ComputerMan} ref={ref} alt='Services' className={`${(show) ? "zoom-image" : ""} rounded-md w-full object-cover`} />
       </div>
       <div className='w-full lg:w-1/2 px-4 pl-10 flex flex-col space-y-9'>
         <h4 className='text-md font-medium font-sans text-green-500 tracking-widest'>OUR SERVICE</h4>

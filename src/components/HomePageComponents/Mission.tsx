@@ -25,13 +25,13 @@ const ProgressBar = ({ value, label }: progressInterface) => {
       <p className='font-bold text-sm tracking-wide text-neutral-600 mb-3'>{label}</p>
       <div className='h-1 w-full bg-neutral-800 flex flex-row'>
         {value===90 && (
-          <div className={`h-full bg-green-400 w-[90%]`}></div>
+          <div className={`h-full bg-green-400 w-[90%] slide-90`}></div>
         )}
         {value===80 && (
-          <div className={`h-full bg-green-400 w-[80%]`}></div>
+          <div className={`h-full bg-green-400 w-[80%] slide-80`}></div>
         )}
         {value===70 && (
-          <div className={`h-full bg-green-400 w-[70%]`}></div>
+          <div className={`h-full bg-green-400 w-[70%] slide-70`}></div>
         )}
         <div className='w-[4px] bg-green-400 h-4 translate-y-[-12px]'></div>
         <div className='bg-green-400 w-[32px] h-[32px] rounded-[50%] z-20 translate-x-[-18px] translate-y-[-36px] font-bold text-xs flex justify-center items-center'>

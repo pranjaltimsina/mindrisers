@@ -1,8 +1,25 @@
+import React, { useState } from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 import StatisticsImage from '../../assets/statistics-img.jpg'
 
+// Add visibility sensor for animations
+interface progressInterface {
+  valueStart: number,
+  valueEnd: number,
+  children: any
+}
+
+const ProgressProvider = ({ valueStart, valueEnd, children }: progressInterface) => {
+  const [value, setValue] = useState<number>(valueStart);
+
+  React.useEffect(() => {
+    setValue(valueEnd);
+  }, [valueEnd]);
+
+  return children(value);
+};
 interface statisticInterface {
   value: number,
   label: string
@@ -12,22 +29,27 @@ const Statistic = ({ value, label }: statisticInterface) => {
   return (
     <div className='flex flex-col items-center'>
       <div className='w-40 h-40 sm:w-36 sm:h-36 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-32 2xl:h-32'>
-        <CircularProgressbar
-          value={value}
-          text={`${value}%`}
-          strokeWidth={6}
-          styles={{
-            path: {
-              // Path color
-              stroke: `rgb(34, 197, 94)`
-            },
-            text: {
-              // Text color
-              fill: `#fff`,
-              fontWeight: 'bold'
-            }
-          }}
-        />
+        <ProgressProvider valueStart={0} valueEnd={value}>
+          {(value: number) =>
+            <CircularProgressbar
+              value={value}
+              text={`${value}%`}
+              strokeWidth={6}
+              styles={{
+                path: {
+                  // Path color
+                  stroke: `rgb(34, 197, 94)`
+                },
+                text: {
+                  // Text color
+                  fill: `#fff`,
+                  fontWeight: 'bold'
+                }
+              }}
+            />
+            // <CircularProgressbar value={value} text={`${value}%`} />
+          }
+        </ProgressProvider>
       </div>
       <p className='text-white font-medium text-center pt-4 text-base md:text-base xl:text-lg 2xl:text-xl'>{label}</p>
     </div>
