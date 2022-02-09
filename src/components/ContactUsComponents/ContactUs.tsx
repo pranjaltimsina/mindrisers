@@ -1,10 +1,17 @@
+import React, { useEffect } from 'react'
+
 import ContactBanner from './ContactBanner'
 import PageCard from './PageCard'
 
 import Building from '../../assets/building.jpg'
-import React from 'react'
 
 const ContactDetails = () => {
+  useEffect(() => window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  }), [])
+
   return (
     <div className='flex flex-col w-full h-full items-center'>
       <div className='w-4/5 h-1/3 border-b-2 border-b-gray-400 py-10'>

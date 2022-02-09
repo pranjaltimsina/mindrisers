@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 
 import HomeAboutUs from './HomeAboutUs'
 import Splash from './Splash'
@@ -14,6 +14,12 @@ const Statistics = React.lazy(() => import('./Statistics'))
 const Testimonials = React.lazy(() => import('./Testimonials'))
 
 const HomePage = () => {
+  useEffect(() => window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  }), [])
+
   return (
     <main>
       <Splash />

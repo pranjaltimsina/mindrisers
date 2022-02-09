@@ -1,6 +1,9 @@
 import ComputerMan from '../../assets/computer-man.jpg'
+import { Link, useLocation } from 'react-router-dom'
 
 const OurServices = () => {
+  const location = useLocation()
+  console.log(location.pathname)
   return (
     <section className="bg-stone-900 h-max flex flex-col lg:flex-row py-20 sm:py-32 px-5 sm:px-32 space-y-12 lg:space-y-0">
       <div className='w-full lg:w-1/2 px-4' >
@@ -14,9 +17,25 @@ const OurServices = () => {
           We not only make top of the line mobile applications, web applications, enterprise applications,
           but also specialize in digital marketing, and teaching you modern technologies.
         </p>
-        <button className='rounded-md bg-green-400 text-white hover:bg-slate-400 hover:text-black duration-500 h-max py-3 w-max px-4'>
-          Learn More
-        </button>
+          {location.pathname === '/services' &&
+            <button
+              onClick={() => window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              })}
+              className='rounded-md bg-green-400 text-white hover:bg-slate-400 hover:text-black duration-500 h-max py-3 w-max px-4'
+            >
+              Learn More
+            </button>
+          }
+          {location.pathname === '/' &&
+            <button className='rounded-md bg-green-400 text-white hover:bg-slate-400 hover:text-black duration-500 h-max py-3 w-max px-4'>
+              <Link to='services'>
+                Learn More
+              </Link>
+            </button>
+          }
       </div>
     </section>
   )
