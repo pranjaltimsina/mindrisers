@@ -1,6 +1,6 @@
 import Prabhu from '../../assets/partners/prabhu-pay.png'
-import Pentagram from '../../assets/partners/pentagram.jpg'
-import RealPath from '../../assets/partners/realpath.jpg'
+// import Pentagram from '../../assets/partners/pentagram.jpg'
+// import RealPath from '../../assets/partners/realpath.jpg'
 import TummyTruck from '../../assets/partners/tummy-truck.png'
 import Vianet from '../../assets/partners/vianet.png'
 

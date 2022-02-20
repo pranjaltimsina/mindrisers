@@ -6,6 +6,7 @@ import OurServices from '../HomePageComponents/OurServices'
 import Partners from '../HomePageComponents/Partners'
 import Testimonials from '../HomePageComponents/Testimonials'
 import ServicesBanner from './ServicesBanner'
+import Trainings from './Trainings'
 
 const Services = () => {
   useEffect(() => window.scrollTo({
@@ -20,6 +21,7 @@ const Services = () => {
       <Jumpstart />
       <OurServices />
       <Discover />
+      <Trainings />
       <Testimonials />
       <Partners />
     </main>
