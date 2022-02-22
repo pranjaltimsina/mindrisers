@@ -11,6 +11,8 @@ const ContactUs = React.lazy(() => import('./components/ContactUsComponents/Cont
 const Services = React.lazy(() => import('./components/ServicesComponents/Services'))
 const Careers = React.lazy(() => import('./components/CareersComponents/Careers'))
 const AboutUs = React.lazy(() => import('./components/AboutUsComponents/AboutUs'))
+const Blogs = React.lazy(() => import('./components/BlogsComponents/Blogs'))
+const Admin = React.lazy(() => import('./components/AdminComponents/Admin'))
 
 
 const App = () => {
@@ -48,6 +50,22 @@ const App = () => {
           element={
             <Suspense fallback={<div className='h-screen'>Loading...</div>}>
               <Careers />
+            </Suspense>
+          }
+        />
+        <Route
+          path='blogs'
+          element={
+            <Suspense fallback={<div className='h-screen'>Loading...</div>}>
+              <Blogs />
+            </Suspense>
+          }
+        />
+        <Route
+          path='admin'
+          element={
+            <Suspense fallback={<div className='h-screen'>Loading...</div>}>
+              <Admin />
             </Suspense>
           }
         />

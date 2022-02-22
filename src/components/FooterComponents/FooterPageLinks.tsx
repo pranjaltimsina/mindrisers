@@ -23,6 +23,11 @@ const FooterPageLinks = () => {
             Contact Us
           </Link>
         </li>
+        <li className='hover:text-neutral-400 cursor-pointer'>
+          <Link to='blogs'>
+            Blogs
+          </Link>
+        </li>
       </ul>
     </div>
   )

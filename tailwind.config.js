@@ -13,6 +13,7 @@ module.exports = {
         'office-bg': "url('/src/assets/office.jpg')",
         'statistics-bg': "url('/src/assets/statistics-bg.jpg')",
         'testimonials': "url('/src/assets/testimonial.jpg')",
+        'blogs': "url('/src/assets/blog-splash.jpg')",
       }, colors: {
         'mask': 'rgba(0,0,0,0.75)',
         'light-mask': 'rgba(0,0,0,0.50)',
