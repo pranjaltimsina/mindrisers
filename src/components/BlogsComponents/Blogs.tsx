@@ -35,6 +35,7 @@ const Blogs = () => {
           thumbnail={webDevThumbnail}
           md={webDev}
           url='web-development'
+          imgAlt='Web Development'
           />
         <BlogCard
           title="App Development"
@@ -42,6 +43,7 @@ const Blogs = () => {
           thumbnail={appThumbnail}
           md={appDev}
           url='app-development'
+          imgAlt='App Development'
           />
         <BlogCard
           title="Software Development"
@@ -49,6 +51,7 @@ const Blogs = () => {
           thumbnail={softwareDevelopmentThumbnail}
           md={softwareDev}
           url='software-development'
+          imgAlt='Software Development'
           />
         <BlogCard
           title="Digital Marketing"
@@ -56,6 +59,7 @@ const Blogs = () => {
           thumbnail={marketingThumbnail}
           md={digitalMarketing}
           url='digital-marketing'
+          imgAlt='Digital Marketing'
           />
         <BlogCard
           title="Trainings"
@@ -63,6 +67,7 @@ const Blogs = () => {
           thumbnail={trainingsThumbnail}
           md={trainings}
           url='trainings'
+          imgAlt='Trainings'
           />
         <BlogCard
           title="Placements"
@@ -70,6 +75,7 @@ const Blogs = () => {
           thumbnail={placementsThumbnail}
           md={placements}
           url='placements'
+          imgAlt='Placements'
           />
       </section>
     </main>

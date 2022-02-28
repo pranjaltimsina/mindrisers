@@ -8,10 +8,11 @@ interface BlogCardInterface {
   title: string,
   blurb: string,
   md: string,
-  url: string
+  url: string,
+  imgAlt: string
 }
 
-const BlogCard = ({ thumbnail, title, blurb, md, url }: BlogCardInterface) => {
+const BlogCard = ({ thumbnail, title, blurb, md, url, imgAlt }: BlogCardInterface) => {
   const navigator = useNavigate()
   const [expand, setExpand] = useState(false)
   const { setHidden } = useContext(overlayContext)
@@ -29,7 +30,7 @@ const BlogCard = ({ thumbnail, title, blurb, md, url }: BlogCardInterface) => {
     <>
       <div onClick={handleOnClick} className='cursor-pointer h-[450px] image-box bg-white w-[80%] md:w-[45%] lg:w-[28%] xl:w-[26%] mt-12 flex flex-col rounded-md hover:rounded-none duration-500'>
         <div className='image-box max-h-56'>
-          <img src={thumbnail} alt="Blog Thumbnail" />
+          <img src={thumbnail} alt={imgAlt} />
         </div>
         <h4 className='font-sans text-neutral-600 font-bold text-xl p-5'>{title}</h4>
         <p className="font-sans text-neutral-700 text-base p-5">
