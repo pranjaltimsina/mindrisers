@@ -25,36 +25,42 @@ const Blogs = () => {
           blurb="We make websites that develop your business"
           thumbnail={BlogThumbnail}
           md={webDev}
+          url='web-development'
           />
         <BlogCard
           title="App Development"
           blurb="Best destination to get your own application developed"
           thumbnail={BlogThumbnail}
           md={appDev}
+          url='app-development'
           />
         <BlogCard
           title="Software Development"
           blurb="Providing the simplest solution for the most complex problem"
           thumbnail={BlogThumbnail}
           md={softwareDev}
+          url='software-development'
           />
         <BlogCard
           title="Digital Marketing"
           blurb="Choose what matters to your business and your customers"
           thumbnail={BlogThumbnail}
           md={digitalMarketing}
+          url='digital-marketing'
           />
         <BlogCard
           title="Trainings"
           blurb="We help the caterpillars and transform them into butterflies"
           thumbnail={BlogThumbnail}
           md={trainings}
+          url='trainings'
           />
         <BlogCard
           title="Placements"
           blurb="Lifting your people and business"
           thumbnail={BlogThumbnail}
           md={placements}
+          url='placements'
           />
       </section>
     </main>

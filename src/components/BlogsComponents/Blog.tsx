@@ -6,11 +6,12 @@ interface BlogInterface {
   apiURl?: string,
   md: string,
   back: any,
-  title: string
+  title: string,
+  url?: string
 }
 
 // const Blog = ({ apiURl }: BlogInterface) => {
-const Blog = ({ apiURl, md, back, title }: BlogInterface) => {
+const Blog = ({ apiURl, md, back, title, url }: BlogInterface) => {
   const [mdText, setmdText] = useState('')
   useEffect(() => {
 		fetch(md).then(res => res.text()).then(text => setmdText(text))

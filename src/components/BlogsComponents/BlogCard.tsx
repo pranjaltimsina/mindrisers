@@ -9,9 +9,10 @@ interface BlogCardInterface {
   title: string,
   blurb: string,
   md: string,
+  url?: string
 }
 
-const BlogCard = ({ thumbnail, title, blurb, md }: BlogCardInterface) => {
+const BlogCard = ({ thumbnail, title, blurb, md, url }: BlogCardInterface) => {
   const [expand, setExpand] = useState(false)
   const {hidden, setHidden} = useContext(overlayContext)
 
