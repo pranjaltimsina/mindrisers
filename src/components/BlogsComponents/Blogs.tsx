@@ -1,4 +1,7 @@
 import { useContext } from "react"
+
+import { Outlet } from 'react-router-dom';
+
 import BlogCard from "./BlogCard"
 import BlogsBanner from "./BlogsBanner"
 
@@ -18,6 +21,7 @@ const Blogs = () => {
 
   return (
     <main className={`h-max w-full ${hidden? 'overflow-hidden h-full' : ''}`}>
+      <Outlet />
       <BlogsBanner />
       <section className='flex flex-row flex-wrap justify-evenly w-full bg-neutral-100 h-max pb-20'>
         <BlogCard

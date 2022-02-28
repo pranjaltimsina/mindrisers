@@ -3,21 +3,24 @@ import React, { useState, useContext, useEffect } from 'react'
 import Blog from './Blog'
 
 import { overlayContext } from '../../overlayContext'
+import { useNavigate } from 'react-router-dom'
 
 interface BlogCardInterface {
   thumbnail: any,
   title: string,
   blurb: string,
   md: string,
-  url?: string
+  url: string
 }
 
 const BlogCard = ({ thumbnail, title, blurb, md, url }: BlogCardInterface) => {
+  const navigator = useNavigate()
   const [expand, setExpand] = useState(false)
   const {hidden, setHidden} = useContext(overlayContext)
 
   const handleOnClick = () => {
     setExpand((current) => !current)
+    navigator(url)
   }
 
   useEffect(() => {
@@ -36,13 +39,13 @@ const BlogCard = ({ thumbnail, title, blurb, md, url }: BlogCardInterface) => {
         </p>
         <p className="font-sans text-green-500 text-base p-5 underline underline-offset-4 font-normal cursor-pointer w-max decoration-current duration-500 hover:decoration-white" >Read Now</p>
       </div>
-      {expand && (
+      {/* {expand && (
         <Blog
           md={md}
           title={title}
           back={handleOnClick}
         />
-      )}
+      )} */}
     </>
   )
 }

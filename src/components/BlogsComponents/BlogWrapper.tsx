@@ -11,34 +11,35 @@ import placements from '../../assets/blogs/placements.md'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const BlogWrapper = () => {
-  let { urlPath } = useParams();
-  console.log(urlPath)
+  const { name } = useParams();
   let currBlog;
   const navigator = useNavigate()
   const goBack = () => {
     navigator('/blogs')
   }
-  // const childRef = useRef(null)
   const fetchBlog = () => {
     currBlog = <div>Blog Not found</div>
-    if (urlPath === 'web-development')
+    if (name === 'web-development')
       currBlog = <Blog title='Web Development' md={webDev} back={goBack}/>
-    if (urlPath === 'app-development')
+    if (name === 'app-development')
       currBlog = <Blog title='App Development' md={appDev} back={goBack}/>
-    if (urlPath === 'software-development')
+    if (name === 'software-development')
       currBlog = <Blog title='Software Development' md={softwareDev} back={goBack}/>
-    if (urlPath === 'trainings')
+    if (name === 'trainings')
       currBlog = <Blog title='Trainings' md={trainings} back={goBack}/>
-    if (urlPath === 'placements')
+    if (name === 'placements')
       currBlog = <Blog title='Placements' md={placements} back={goBack}/>
-    if (urlPath === 'digital-marketing')
+    if (name === 'digital-marketing')
       currBlog = <Blog title='Digital Marketing' md={digitalMarketing} back={goBack}/>
     }
 
-  useEffect(fetchBlog ,[])
+    fetchBlog()
+
 
   return (
-    {currBlog}
+    <main>
+      {currBlog}
+    </main>
   )
 }
 

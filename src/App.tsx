@@ -7,6 +7,7 @@ import NotFound from './components/404Components/NotFound'
 import Footer from './components/FooterComponents/Footer'
 
 import { overlayContext } from './overlayContext'
+import BlogWrapper from './components/BlogsComponents/BlogWrapper'
 
 // lazy loaded
 const ContactUs = React.lazy(() => import('./components/ContactUsComponents/ContactUs'))
@@ -66,7 +67,10 @@ const App = () => {
                   <Blogs />
                 </Suspense>
               }
-            />
+            >
+              <Route path=':name' element={<BlogWrapper />} />
+            </Route>
+
             <Route
               path='admin'
               element={
