@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useContext } from 'react'
 
 import Blog from "./Blog"
 
@@ -10,11 +10,16 @@ import trainings from '../../assets/blogs/trainings.md'
 import placements from '../../assets/blogs/placements.md'
 import { useNavigate, useParams } from 'react-router-dom'
 
+import { overlayContext } from '../../overlayContext'
+
 const BlogWrapper = () => {
+
   const { name } = useParams();
+  const {hidden, setHidden} = useContext(overlayContext)
   let currBlog;
   const navigator = useNavigate()
   const goBack = () => {
+    setHidden(false)
     navigator('/blogs')
   }
   const fetchBlog = () => {
