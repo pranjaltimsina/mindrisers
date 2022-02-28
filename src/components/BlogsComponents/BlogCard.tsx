@@ -1,7 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
 
-import Blog from './Blog'
-
 import { overlayContext } from '../../overlayContext'
 import { useNavigate } from 'react-router-dom'
 
@@ -16,7 +14,7 @@ interface BlogCardInterface {
 const BlogCard = ({ thumbnail, title, blurb, md, url }: BlogCardInterface) => {
   const navigator = useNavigate()
   const [expand, setExpand] = useState(false)
-  const {hidden, setHidden} = useContext(overlayContext)
+  const { setHidden } = useContext(overlayContext)
 
   const handleOnClick = () => {
     setExpand((current) => !current)

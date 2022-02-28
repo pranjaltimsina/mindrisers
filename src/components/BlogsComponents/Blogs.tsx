@@ -5,7 +5,12 @@ import { Outlet } from 'react-router-dom';
 import BlogCard from "./BlogCard"
 import BlogsBanner from "./BlogsBanner"
 
-import BlogThumbnail from '../../assets/blog-thumbnail.jpg'
+import webDevThumbnail from '../../assets/discover/webdev.jpg'
+import appThumbnail from '../../assets/discover/mobile.jpg'
+import softwareDevelopmentThumbnail from '../../assets/discover/database.jpg'
+import marketingThumbnail from '../../assets/discover/marketing.jpg'
+import placementsThumbnail from '../../assets/office.jpg'
+import trainingsThumbnail from '../../assets/statistics-bg.jpg'
 
 import webDev from '../../assets/blogs/web-dev.md'
 import softwareDev from '../../assets/blogs/software-dev.md'
@@ -17,7 +22,7 @@ import { overlayContext } from '../../overlayContext'
 
 
 const Blogs = () => {
-  const {hidden, setHidden} = useContext(overlayContext)
+  const { hidden } = useContext(overlayContext)
 
   return (
     <main className={`h-max w-full ${hidden? 'overflow-hidden h-full' : ''}`}>
@@ -27,42 +32,42 @@ const Blogs = () => {
         <BlogCard
           title="Web Development"
           blurb="We make websites that develop your business"
-          thumbnail={BlogThumbnail}
+          thumbnail={webDevThumbnail}
           md={webDev}
           url='web-development'
           />
         <BlogCard
           title="App Development"
           blurb="Best destination to get your own application developed"
-          thumbnail={BlogThumbnail}
+          thumbnail={appThumbnail}
           md={appDev}
           url='app-development'
           />
         <BlogCard
           title="Software Development"
           blurb="Providing the simplest solution for the most complex problem"
-          thumbnail={BlogThumbnail}
+          thumbnail={softwareDevelopmentThumbnail}
           md={softwareDev}
           url='software-development'
           />
         <BlogCard
           title="Digital Marketing"
           blurb="Choose what matters to your business and your customers"
-          thumbnail={BlogThumbnail}
+          thumbnail={marketingThumbnail}
           md={digitalMarketing}
           url='digital-marketing'
           />
         <BlogCard
           title="Trainings"
           blurb="We help the caterpillars and transform them into butterflies"
-          thumbnail={BlogThumbnail}
+          thumbnail={trainingsThumbnail}
           md={trainings}
           url='trainings'
           />
         <BlogCard
           title="Placements"
           blurb="Lifting your people and business"
-          thumbnail={BlogThumbnail}
+          thumbnail={placementsThumbnail}
           md={placements}
           url='placements'
           />

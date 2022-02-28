@@ -15,7 +15,7 @@ import { overlayContext } from '../../overlayContext'
 const BlogWrapper = () => {
 
   const { name } = useParams();
-  const {hidden, setHidden} = useContext(overlayContext)
+  const { setHidden } = useContext(overlayContext)
   let currBlog;
   const navigator = useNavigate()
   const goBack = () => {
