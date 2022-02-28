@@ -17,6 +17,7 @@ module.exports = {
       }, colors: {
         'mask': 'rgba(0,0,0,0.75)',
         'light-mask': 'rgba(0,0,0,0.50)',
+        'mask-white': 'rgba(256,256,256,0.50)',
       },
     },
   },
