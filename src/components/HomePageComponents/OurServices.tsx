@@ -29,14 +29,14 @@ const OurServices = () => {
 
 
   return (
-    <section className="bg-stone-900 h-max flex flex-col lg:flex-row py-20 sm:py-32 px-5 sm:px-32 space-y-12 lg:space-y-0">
+    <section className="bg-white h-max flex flex-col lg:flex-row py-20 sm:py-32 px-5 sm:px-32 space-y-12 lg:space-y-0">
       <div className='w-full lg:w-1/2 px-4' >
         <img src={ComputerMan} ref={ref} alt='Services' className={`${(show) ? "zoom-image" : ""} rounded-md w-full object-cover`} />
       </div>
       <div className='w-full lg:w-1/2 px-4 pl-10 flex flex-col space-y-9'>
         <h4 className='text-md font-medium font-sans text-green-500 tracking-widest'>OUR SERVICE</h4>
-        <h1 className='text-white font-bold text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl w-5/6' >Managed IT solutions tailored to your business.</h1>
-        <p className='text-white'>
+        <h1 className='text-black font-bold text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl w-5/6' >Managed IT solutions tailored to your business.</h1>
+        <p className='text-black'>
           Our team is capable of making applications as sophisticated as you can imagine.
           We not only make top of the line mobile applications, web applications, enterprise applications,
           but also specialize in digital marketing, and teaching you modern technologies.

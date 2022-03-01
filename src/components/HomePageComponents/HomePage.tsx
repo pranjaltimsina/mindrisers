@@ -28,8 +28,8 @@ const HomePage = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Mission />
         <OurServices />
-        <StudyAbroad />
-        <Discover />
+        {/* <StudyAbroad />
+        <Discover /> */}
         <Statistics />
         <Jumpstart />
         {/* <OurProjects /> */}
