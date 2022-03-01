@@ -233,6 +233,7 @@ const Trainings = ({ bgColor='bg-neutral-200', cardBg='bg-white' }: TrainingsInt
             <img src={Webdev} alt='Digital Marketing'/>
           }
           isTraining
+          bgColor={cardBg}
           modalTitle='Syllabus for Digital Marketing 101'
           modalContent={
             <ul className='px-6 sm:px-10 flex flex-col space-y-2'>
