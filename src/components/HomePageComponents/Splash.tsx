@@ -29,7 +29,7 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 // }
 const Splash = () => {
   return (
-  <>
+  <div className='relative z-[-10]'>
     <Swiper
       // @ts-expect-error
         style={{ "--swiper-navigation-color": "#fff", "--swiper-pagination-color": "#fff", }}
@@ -105,7 +105,7 @@ const Splash = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-  </>
+  </div>
   )
 }
 
