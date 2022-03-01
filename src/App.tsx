@@ -8,6 +8,9 @@ import Footer from './components/FooterComponents/Footer'
 
 import { overlayContext } from './overlayContext'
 import BlogWrapper from './components/BlogsComponents/BlogWrapper'
+import Discover from './components/HomePageComponents/Discover'
+import StudyAbroad from './components/HomePageComponents/StudyAbroad'
+import Trainings from './components/ServicesComponents/Trainings'
 
 // lazy loaded
 const ContactUs = React.lazy(() => import('./components/ContactUsComponents/ContactUs'))
@@ -15,7 +18,7 @@ const Services = React.lazy(() => import('./components/ServicesComponents/Servic
 const Careers = React.lazy(() => import('./components/CareersComponents/Careers'))
 const AboutUs = React.lazy(() => import('./components/AboutUsComponents/AboutUs'))
 const Blogs = React.lazy(() => import('./components/BlogsComponents/Blogs'))
-const Admin = React.lazy(() => import('./components/AdminComponents/Admin'))
+// const Admin = React.lazy(() => import('./components/AdminComponents/Admin'))
 
 
 const App = () => {
@@ -70,15 +73,38 @@ const App = () => {
             >
               <Route path=':name' element={<BlogWrapper />} />
             </Route>
-
             <Route
+              path='tech-services'
+              element={
+                <Suspense fallback={<div className='h-screen'>Loading...</div>}>
+                  <Discover bgColor='bg-white' cardBg='bg-neutral-100'/>
+                </Suspense>
+              }
+            />
+            <Route
+              path='study-abroad'
+              element={
+                <Suspense fallback={<div className='h-screen'>Loading...</div>}>
+                  <StudyAbroad />
+                </Suspense>
+              }
+            />
+            <Route
+              path='trainings'
+              element={
+                <Suspense fallback={<div className='h-screen'>Loading...</div>}>
+                  <Trainings bgColor='bg-white' cardBg='bg-neutral-100'/>
+                </Suspense>
+              }
+            />
+            {/* <Route
               path='admin'
               element={
                 <Suspense fallback={<div className='h-screen'>Loading...</div>}>
                   <Admin />
                 </Suspense>
               }
-            />
+            /> */}
             <Route path='*'element={<NotFound />} />
           </Routes>
           <Footer />

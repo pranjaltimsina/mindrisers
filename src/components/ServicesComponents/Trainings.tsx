@@ -1,9 +1,14 @@
 import DiscoverCard from '../HomePageComponents/DiscoverCard'
 import Webdev from '../../assets/discover/webdev.jpg'
 
-const Trainings = () => {
+interface TrainingsInterface {
+  bgColor?: string,
+  cardBg?: string
+}
+
+const Trainings = ({ bgColor='bg-neutral-200', cardBg='bg-white' }: TrainingsInterface) => {
   return (
-    <section className='bg-neutral-200 flex flex-col pb-20 pt-20 sm:pb-24 sm:pt-24 px-5 sm:px-14 md:px-18 lg:px-32 xl:px-44'>
+    <section className={`${bgColor} flex flex-col pb-20 pt-20 sm:pb-24 sm:pt-24 px-5 sm:px-14 md:px-18 lg:px-32 xl:px-44`}>
       <h1 className='w-full text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-sans'>Trainings</h1>
       <div className='flex flex-col  md:flex-row flex-wrap w-full justify-between'>
         <DiscoverCard
@@ -14,6 +19,7 @@ const Trainings = () => {
           }
           isTraining
           modalTitle='Syllabus for Python 101'
+          bgColor={cardBg}
           modalContent={
             <ul className='px-6 sm:px-10 flex flex-col space-y-2'>
               <li>Fundamentals of Python</li>
@@ -40,6 +46,7 @@ const Trainings = () => {
             <img src={Webdev} alt='Mobile Development'/>
           }
           isTraining
+          bgColor={cardBg}
           modalTitle='Syllabus for Mobile Development 101'
           modalContent={
             <ul className='px-6 sm:px-10 flex flex-col space-y-2'>
@@ -67,6 +74,7 @@ const Trainings = () => {
           image={
             <img src={Webdev} alt='Web Development'/>
           }
+          bgColor={cardBg}
           isTraining
           modalTitle='Syllabus for Java 101'
           modalContent={
@@ -113,6 +121,7 @@ const Trainings = () => {
             <img src={Webdev} alt='Web Development'/>
           }
           isTraining
+          bgColor={cardBg}
           modalTitle='Syllabus for Web Development'
           modalContent={
             <ul className='px-6 sm:px-10 flex flex-col space-y-2'>
@@ -209,6 +218,7 @@ const Trainings = () => {
           }
           isTraining
           modalTitle='Syllabus for Databases 101'
+          bgColor={cardBg}
           modalContent={
             <div className='w-full text-center'>
               Syllabus will be provided upon request
