@@ -33,7 +33,7 @@ const Splash = () => {
     <Swiper
       // @ts-expect-error
         style={{ "--swiper-navigation-color": "#fff", "--swiper-pagination-color": "#fff", }}
-        speed={600}
+        speed={800}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
