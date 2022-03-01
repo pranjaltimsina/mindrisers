@@ -11,7 +11,7 @@ const TrainingModal = ({ title, content, downloadLink, close }: trainingModalInt
       <div onClick={(e) => e.stopPropagation()} className='w-full h-full sm:w-3/4 sm:h-4/5 md:w-2/3 md:h-4/5 lg:w-2/5 bg-white rounded-md flex flex-col justify-between overflow-auto'>
         <div className='flex flex-row justify-between items-center px-6 sm:px-10 py-4 h-max'>
           <h4 className='w-max font-semibold font-sans text-lg'>{title}</h4>
-          <svg onClick={() => close((current: any) => !current)} xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+          <svg onClick={() => close((current: any) => !current)} xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
           </svg>
         </div>

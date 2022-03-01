@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Parallax, Pagination, Navigation, Autoplay } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 // const Splash = () => {
 //   return (
