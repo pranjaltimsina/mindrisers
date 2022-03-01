@@ -38,19 +38,20 @@ const Splash = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        loop={true}
         pagination={{
-          clickable: false,
+          clickable: true,
         }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation, Autoplay]}
+        modules={[ Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         {/* <div
           slot="container-start"
           className="parallax-bg bg-splash-bg"
           data-swiper-parallax="-23%"></div> */}
-          <SwiperSlide>
-            <div className='bg-splash-bg bg-fixed bg-contain sm:bg-cover w-full h-screen'>
+          <SwiperSlide >
+            <div className='bg-splash-bg bg-contain sm:bg-cover w-full h-screen'>
               <div className='w-full h-full flex flex-col items-center bg-mask'>
                 <div className='slide-left-to-right pt-20 sm:pt-32 md:pt-32 lg:pt-48 xl:pt-52 text-md text-green-400'>MANAGED IT SOLUTIONS</div>
                 <h1 className='text-fade h-max mt-2 w-4/5 sm:w-1/2 text-center text-white font-sans font-extrabold text-4xl sm:text-6xl'>
@@ -68,7 +69,7 @@ const Splash = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='bg-splash-bg bg-fixed bg-contain sm:bg-cover w-full h-screen'>
+            <div className='bg-splash-ed bg-contain sm:bg-cover w-full h-screen'>
               <div className='w-full h-full flex flex-col items-center bg-mask'>
                 <div className='slide-left-to-right pt-20 sm:pt-32 md:pt-32 lg:pt-48 xl:pt-52 text-md text-green-400'>EDUCATION CONSULTANCY</div>
                 <h1 className='text-fade h-max mt-2 w-4/5 sm:w-1/2 text-center text-white font-sans font-extrabold text-4xl sm:text-6xl'>
@@ -86,7 +87,7 @@ const Splash = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='bg-splash-bg bg-fixed bg-contain sm:bg-cover w-full h-screen'>
+            <div className='bg-statistics-bg bg-contain sm:bg-cover w-full h-screen'>
               <div className='w-full h-full flex flex-col items-center bg-mask'>
                 <div className='slide-left-to-right pt-20 sm:pt-32 md:pt-32 lg:pt-48 xl:pt-52 text-md text-green-400'>SOFTWARE DEVELOPMENT TRAININGS</div>
                 <h1 className='text-fade h-max mt-2 w-4/5 sm:w-1/2 text-center text-white font-sans font-extrabold text-4xl sm:text-6xl'>
