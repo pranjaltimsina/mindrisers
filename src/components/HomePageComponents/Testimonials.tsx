@@ -1,3 +1,10 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
+
 import TestimonialCard from './TestimonialCard'
 
 const Testimonials = () => {
@@ -8,21 +15,61 @@ const Testimonials = () => {
           <p className="w-full text-center text-green-500 text-sm tracking-widest font-medium mb-5">TESTIMONIALS</p>
           <h3 className='w-full text-center text-white font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-5'>What they say</h3>
         </div>
-        <div className='w-full flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:space-x-12 justify-center items-center'>
-          <TestimonialCard
-            starCount={5}
-            image='img'
-            name='John Doe'
-            position='CEO'
-            testimonial='Whenever we need an intern, mindrisers is our go-to place. They have never let us down.'
+        <div className='w-full justify-center items-center'>
+        <Swiper
+        // @ts-expect-error
+        style={{ "--swiper-navigation-color": "#ded",  }}
+        slidesPerView={1}
+        spaceBetween={30}
+        slidesPerGroup={1}
+        loop={true}
+        loopFillGroupWithBlank={false}
+        pagination={{
+          clickable: true,
+        }}
+        centeredSlides={true}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+          <SwiperSlide>
+
+            <TestimonialCard
+              starCount={5}
+              image='img'
+              name='John Doe'
+              position='CEO'
+              testimonial='Whenever we need an intern, mindrisers is our go-to place. They have never let us down.'
+              />
+          </SwiperSlide>
+          <SwiperSlide>
+            <TestimonialCard
+              starCount={5}
+              image='img'
+              name='John Doe'
+              position='CEO'
+              testimonial='Mindrisers is the best in town when we want to teach our new recruits some new technology.'
             />
-          <TestimonialCard
-            starCount={5}
-            image='img'
-            name='John Doe'
-            position='CEO'
-            testimonial='Mindrisers is the best in town when we want to teach our new recruits some new technology.'
-          />
+          </SwiperSlide>
+          <SwiperSlide>
+            <TestimonialCard
+              starCount={5}
+              image='img'
+              name='John Doe'
+              position='CEO'
+              testimonial='Mindrisers is the best in town when we want to teach our new recruits some new technology.'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <TestimonialCard
+              starCount={5}
+              image='img'
+              name='John Doe'
+              position='CEO'
+              testimonial='Mindrisers is the best in town when we want to teach our new recruits some new technology.'
+            />
+          </SwiperSlide>
+        </Swiper>
         </div>
       </div>
     </section>
