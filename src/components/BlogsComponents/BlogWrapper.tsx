@@ -8,6 +8,7 @@ import digitalMarketing from '../../assets/blogs/digital-marketing.md'
 import appDev from '../../assets/blogs/app-dev.md'
 import trainings from '../../assets/blogs/trainings.md'
 import placements from '../../assets/blogs/placements.md'
+import testBlog from '../../assets/blogs/test.md'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { overlayContext } from '../../overlayContext'
@@ -24,6 +25,8 @@ const BlogWrapper = () => {
   }
   const fetchBlog = () => {
     currBlog = <div>Blog Not found</div>
+    if (name === 'test-blog')
+      currBlog = <Blog title='Test Blog' md={testBlog} back={goBack}/>
     if (name === 'web-development')
       currBlog = <Blog title='Web Development' md={webDev} back={goBack}/>
     if (name === 'app-development')
