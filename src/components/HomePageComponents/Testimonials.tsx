@@ -4,10 +4,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import { useMediaQuery } from "react-responsive";
 
 import TestimonialCard from './TestimonialCard'
 
 const Testimonials = () => {
+  const useTwo = useMediaQuery({ query: '(min-width: 768px)' })
+
   return (
     <section className='bg-testimonials bg-fixed bg-contain h-max'>
       <div className='w-full h-full flex flex-col items-center bg-mask py-20 sm:py-32 px-0 space-y-12'>
@@ -19,17 +22,17 @@ const Testimonials = () => {
         <Swiper
         // @ts-expect-error
         style={{ "--swiper-navigation-color": "#ded",  }}
-        slidesPerView={1}
-        spaceBetween={30}
+        slidesPerView={useTwo ? 2: 1}
+        spaceBetween={0}
         slidesPerGroup={1}
         loop={true}
         loopFillGroupWithBlank={false}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         centeredSlides={true}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[ Navigation]}
         className="mySwiper"
       >
           <SwiperSlide>

@@ -16,7 +16,7 @@ const TestimonialCard = ({ starCount, testimonial, image, name, position }: test
     )
   }
   return (
-    <div className='bg-white rounded-md w-[96%] sm:w-[75%] md:w-[50%] lg:w-[40%] xl:w-[39%] 2xl:w-[38%] h-max p-8 px-8 flex flex-col mx-auto'>
+    <div className='bg-white rounded-md w-[96%] sm:w-[75%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[80%] h-max p-8 px-8 flex flex-col mx-auto'>
       <div className='flex flex-row space-x-2 w-full'>
         {stars}
       </div>
