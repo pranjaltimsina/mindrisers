@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
 import Prabhu from '../../assets/partners/prabhu-pay.png'
 import Pentagram from '../../assets/partners/pentagram.jpg'
@@ -45,12 +45,17 @@ const Partners = () => {
         spaceBetween={30}
         slidesPerGroup={1}
         loop={true}
+        speed={800}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         loopFillGroupWithBlank={false}
         // pagination={{
         //   clickable: false,
         // }}
         navigation={true}
-        modules={[ Navigation]}
+        modules={[ Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>

@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import { useMediaQuery } from "react-responsive";
 
 import TestimonialCard from './TestimonialCard'
@@ -25,6 +25,11 @@ const Testimonials = () => {
         slidesPerView={useTwo ? 2: 1}
         spaceBetween={0}
         slidesPerGroup={1}
+        speed={800}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         loop={true}
         loopFillGroupWithBlank={false}
         // pagination={{
@@ -32,7 +37,7 @@ const Testimonials = () => {
         // }}
         centeredSlides={true}
         navigation={true}
-        modules={[ Navigation]}
+        modules={[ Navigation, Autoplay]}
         className="mySwiper"
       >
           <SwiperSlide>
