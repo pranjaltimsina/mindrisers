@@ -9,10 +9,11 @@ interface DiscoverCardInterface {
   isTraining?: boolean,
   modalTitle?: string,
   modalContent?: any,
-  downloadLink?: any
+  downloadLink?: any,
+  bgColor?: string
 }
 
-const DiscoverCard = ({ image, title, info, isTraining, modalTitle, modalContent, downloadLink }: DiscoverCardInterface) => {
+const DiscoverCard = ({ image, title, info, isTraining, modalTitle, modalContent, downloadLink, bgColor='bg-white' }: DiscoverCardInterface) => {
   const [expand, setExpand] = useState(false)
 
 
@@ -22,7 +23,7 @@ const DiscoverCard = ({ image, title, info, isTraining, modalTitle, modalContent
   }
   return (
     <>
-      <div onClick={handleOnClick} className='image-box bg-white md:w-[45%] lg:w-[30%] mt-12 flex flex-col rounded-md hover:rounded-none duration-500'>
+      <div onClick={handleOnClick} className={`image-box ${bgColor} md:w-[45%] lg:w-[30%] mt-12 flex flex-col rounded-md hover:rounded-none duration-500`}>
         <div className='image-box max-h-56'>
           {image}
         </div>

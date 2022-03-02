@@ -7,6 +7,7 @@ import Splash from './Splash'
 const Discover = React.lazy(() => import('./Discover'))
 const Jumpstart = React.lazy(() => import('./Jumpstart'))
 const Mission = React.lazy(() => import('./Mission'))
+const StudyAbroad = React.lazy(() => import('./StudyAbroad'))
 // const OurProjects = React.lazy(() => import('./OurProjects'))
 const OurServices = React.lazy(() => import('./OurServices'))
 const Partners = React.lazy(() => import('./Partners'))
@@ -27,7 +28,8 @@ const HomePage = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Mission />
         <OurServices />
-        <Discover />
+        {/* <StudyAbroad />
+        <Discover /> */}
         <Statistics />
         <Jumpstart />
         {/* <OurProjects /> */}

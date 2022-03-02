@@ -18,6 +18,8 @@ import digitalMarketing from '../../assets/blogs/digital-marketing.md'
 import appDev from '../../assets/blogs/app-dev.md'
 import trainings from '../../assets/blogs/trainings.md'
 import placements from '../../assets/blogs/placements.md'
+import testBlog from '../../assets/blogs/test.md'
+
 import { overlayContext } from '../../overlayContext'
 
 
@@ -29,6 +31,14 @@ const Blogs = () => {
       <Outlet />
       <BlogsBanner />
       <section className='flex flex-row flex-wrap justify-evenly w-full bg-neutral-100 h-max pb-20'>
+        <BlogCard
+          title="Test Blog"
+          blurb="We make websites that develop your business"
+          thumbnail={webDevThumbnail}
+          md={testBlog}
+          url='test-blog'
+          imgAlt='Web Development'
+          />
         <BlogCard
           title="Web Development"
           blurb="We make websites that develop your business"

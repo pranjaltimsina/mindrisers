@@ -46,3 +46,10 @@ pagecard > img {
   place-items: center;
   z-index: 1000;
 }
+
+.swiper-slide {
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}

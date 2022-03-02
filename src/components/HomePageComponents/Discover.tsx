@@ -7,10 +7,15 @@ import Mobile from '../../assets/discover/mobile.jpg'
 import Enterprise from '../../assets/discover/enterprise.jpg'
 import Marketing from '../../assets/discover/marketing.jpg'
 
-const Discover = () => {
+interface DiscoverInterface {
+  bgColor?: string,
+  cardBg?: string
+}
+
+const Discover = ({ bgColor='bg-neutral-100', cardBg }: DiscoverInterface) => {
   return (
-    <section className='bg-neutral-100 flex flex-col py-20 sm:py-24 px-5 sm:px-14 md:px-18 lg:px-32 xl:px-44'>
-      <h1 className='w-full text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-sans'>Services we provide</h1>
+    <section className={`${bgColor} flex flex-col py-20 sm:py-24 px-5 sm:px-14 md:px-18 lg:px-32 xl:px-44`}>
+      <h1 className='w-full text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-sans'>Tech services we provide</h1>
       <div className='flex flex-col  md:flex-row flex-wrap w-full justify-between'>
         <DiscoverCard
           title='Database Migrations'
@@ -18,6 +23,7 @@ const Discover = () => {
           image={
             <img src={Database} alt='Database Migrations'/>
           }
+          bgColor={cardBg}
         />
         <DiscoverCard
           title='Managed Hostings'
@@ -25,12 +31,14 @@ const Discover = () => {
           image={
             <img src={Hosting} alt='Managed Hostings'/>
           }
+          bgColor={cardBg}
         />
         <DiscoverCard
           title='Web Development' info='We make the best in class modern web applications. Contact us for a quote.'
           image={
             <img src={Webdev} alt='Web Development'/>
           }
+          bgColor={cardBg}
         />
         <DiscoverCard
           title='Mobile Apps'
@@ -38,6 +46,7 @@ const Discover = () => {
           image={
             <img src={Mobile} alt='Mobile Apps'/>
           }
+          bgColor={cardBg}
         />
         <DiscoverCard
           title='Enterprise Softwares'
@@ -45,6 +54,7 @@ const Discover = () => {
           image={
             <img src={Enterprise} alt='Enterprise Softwares'/>
           }
+          bgColor={cardBg}
         />
         <DiscoverCard
           title='Digital Marketing'
@@ -52,6 +62,7 @@ const Discover = () => {
           image={
             <img src={Marketing} alt='Digital Marketing'/>
           }
+          bgColor={cardBg}
         />
       </div>
     </section>
