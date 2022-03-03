@@ -19,8 +19,8 @@ const BlogCard = ({ thumbnail, title, blurb, md, url, imgAlt }: BlogCardInterfac
 
   const handleOnClick = () => {
     setExpand((current) => !current)
-    // navigator(url)
-    window.location.href =`https://mindrisers.pages.dev/blogs/${url}`
+    navigator(url)
+    // window.location.href =`https://mindrisers.pages.dev/blogs/${url}`
   }
 
   useEffect(() => {
