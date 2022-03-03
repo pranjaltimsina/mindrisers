@@ -5,7 +5,12 @@ interface trainingModalInterface {
   close: any
 }
 
+
+
 const TrainingModal = ({ title, content, downloadLink, close }: trainingModalInterface) => {
+  const handleClick = () => {
+    window.open("https://forms.gle/vVRAu92SmYSdjwMv5");
+  };
   return (
     <div className='overlay' onClick={() => close((current: any) => !current)}>
       <div onClick={(e) => e.stopPropagation()} className='w-full h-full sm:w-3/4 sm:h-4/5 md:w-2/3 md:h-4/5 lg:w-2/5 bg-white rounded-md flex flex-col justify-between overflow-auto'>
@@ -17,7 +22,7 @@ const TrainingModal = ({ title, content, downloadLink, close }: trainingModalInt
         </div>
         {content}
         <div className='w-full h-max flex flex-row justify-center items-center my-7'>
-          <button className='w-max px-10 py-4 bg-green-400 font-semibold text-white rounded-md hover:bg-slate-500 hover:text-black duration-500'>Download</button>
+          <button onClick={handleClick}  className='w-max px-10 py-4 bg-green-400 font-semibold text-white rounded-md hover:bg-slate-500 hover:text-black duration-500'>Apply Now</button>
         </div>
       </div>
     </div>
